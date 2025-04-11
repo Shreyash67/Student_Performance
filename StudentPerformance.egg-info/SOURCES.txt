@@ -1,0 +1,6 @@
+setup.py
+StudentPerformance.egg-info/PKG-INFO
+StudentPerformance.egg-info/SOURCES.txt
+StudentPerformance.egg-info/dependency_links.txt
+StudentPerformance.egg-info/requires.txt
+StudentPerformance.egg-info/top_level.txt
