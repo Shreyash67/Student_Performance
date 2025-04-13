@@ -23,7 +23,6 @@ def actual_model(df):
     model_name = model.__class__.__name__
 
     return model_name,model
-
-    
+ 
 
 # df = pd.read_csv("H:\\Student_Performance\\new_data\\data.csv")
