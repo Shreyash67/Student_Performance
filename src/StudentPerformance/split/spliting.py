@@ -6,6 +6,3 @@ def split(df):
 
     return x,y
 
-# df = pd.read_csv("H:\\Student_Performance\\new_data\\data.csv")
-# x,y = split(df)
-# print(y)
