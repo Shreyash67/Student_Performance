@@ -1,4 +1,4 @@
-math score,reading score,writing score,Result
+math_score,reading_score,writing_score,Result
 72,72,74,Pass
 69,90,88,Pass
 90,95,93,Pass
