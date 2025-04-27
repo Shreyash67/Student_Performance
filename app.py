@@ -25,7 +25,7 @@ def predict():
             result = model.predict(input_data)
             predict_price = float(result[0])
 
-            return render_template('index.html',result = f"Predicted House Price: {predict_price:.2f}$")
+            return render_template('index.html',result = f"Predict Student Pass Or Fail: {predict_price:.2f}$")
         except Exception as e:
             return render_template('index.html',result=f"Error: {e}")
 
