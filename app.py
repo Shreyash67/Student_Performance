@@ -29,7 +29,7 @@ def predict():
             else:
                 prediction = "Fail"
 
-            return render_template('index.html',result = f"Predict Student Pass Or Fail: {prediction}")
+            return render_template('index.html',result = f"Student Result: {prediction}")
         except Exception as e:
             return render_template('index.html',result=f"Error: {e}")
 
