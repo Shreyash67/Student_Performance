@@ -67,16 +67,16 @@
         <h1>Student Performance</h1>
 
         <form method="POST" action="{{ url_for('predict') }}">
-            <label for="Area">Area:</label>
-            <input type="number" name="Area" step="0.01" required><br>
+            <label for="math_score">math_score:</label>
+            <input type="number" name="math_score" step="1" required><br>
 
-            <label for="BHK">BHK:</label>
-            <input type="number" name="BHK" step="1" required><br>
+            <label for="reading_score">reading_score:</label>
+            <input type="number" name="reading_score" step="1" required><br>
 
-            <label for="Bathroom">Bathroom:</label>
-            <input type="number" name="Bathroom" step="1" required><br>
+            <label for="writing_score">writing_score:</label>
+            <input type="number" name="writing_score" step="1" required><br>
 
-            <button type="submit">Predict House Price</button>
+            <button type="submit">Predict Student Performance</button>
         </form>
 
         {% if result %}

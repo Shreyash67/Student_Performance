@@ -16,4 +16,18 @@ def predict():
     if request.method == 'GET':
         return render_template('index.html')
     else:
-        pass
+        try:
+            math_score = float(request.form['math_score'])
+            reading_score = float(request.form['reading_score'])
+            writing_score = float(request.form['writing_score'])
+
+            input_data = np.array([[math_score,reading_score,writing_score]])
+            result = model.predict(input_data)
+            predict_price = float(result[0])
+
+            return render_template('index.html',result = f"Predicted House Price: {predict_price:.2f}$")
+        except Exception as e:
+            return render_template('index.html',result=f"Error: {e}")
+
+if __name__ == '__main__':
+    app.run(debug=True)
