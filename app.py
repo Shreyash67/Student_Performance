@@ -4,7 +4,7 @@ import pickle
 
 app = Flask(__name__)
 
-with open('H:\Student_Performance\data\StudentsPerformance.csv','rb') as file:
+with open('H:\Student_Performance\my_model\Logistic_model.pkl','rb') as file:
     model = pickle.load(file)
 
 @app.route('/')
@@ -23,7 +23,7 @@ def predict():
 
             input_data = np.array([[math_score,reading_score,writing_score]])
             result = model.predict(input_data)
-            predict_price = float(result[0])
+            predict_price = str(result[0])
 
             return render_template('index.html',result = f"Predict Student Pass Or Fail: {predict_price:.2f}$")
         except Exception as e:
