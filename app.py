@@ -23,9 +23,13 @@ def predict():
 
             input_data = np.array([[math_score,reading_score,writing_score]])
             result = model.predict(input_data)
-            predict_price = str(result[0])
 
-            return render_template('index.html',result = f"Predict Student Pass Or Fail: {predict_price:.2f}$")
+            if result[0]==1:
+                prediction = "Pass"
+            else:
+                prediction = "Fail"
+
+            return render_template('index.html',result = f"Predict Student Pass Or Fail: {prediction}")
         except Exception as e:
             return render_template('index.html',result=f"Error: {e}")
 
